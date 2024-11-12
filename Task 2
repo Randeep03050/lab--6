@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    double amount, discount = 0.0;
+
+    // Prompt the user to enter the amount spent
+    printf("Enter the amount spent: ");
+    scanf("%lf", &amount);
+
+    // Calculate discount using nested if statements
+    if (amount >= 100) {
+        discount = amount * 0.10; // 10% discount
+
+        if (amount >= 500) {
+            discount += amount * 0.05; // Additional 5% discount
+        }
+    }
+
+    printf("Total discount: $%.2lf\n", discount);
+    printf("Amount after discount: $%.2lf\n", amount - discount);
+
+    return 0;
+}
